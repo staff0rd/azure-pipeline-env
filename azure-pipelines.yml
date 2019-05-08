@@ -14,5 +14,8 @@ pool:
 
 steps:
 - task: PowerShell@2
+
   displayName: 'Echo env variables'
-  inputs: "$(Write-Host Path: $(ChromeWebDriver); Write-Host env: $(driver))"
+  inputs: 
+  - targetType: inline
+    script: "Write-Host Path: $(ChromeWebDriver); Write-Host env: $(driver)"
