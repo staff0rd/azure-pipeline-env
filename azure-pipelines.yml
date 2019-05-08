@@ -1,0 +1,18 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+variables:
+  driver: $(ChromeWebDriver)
+
+pool:
+  vmImage: 'vs2017-win2016'
+
+steps:
+- task: PowerShell@2
+  displayName: 'Echo env variables'
+  inputs: "Write-Host Path: $(ChromeWebDriver); Write-Host env: $(driver)""
