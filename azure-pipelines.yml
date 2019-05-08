@@ -19,3 +19,6 @@ steps:
   inputs: 
     targetType: inline
     script: "Get-ChildItem $(driver)"
+  - task: CmdLine@2
+  inputs:
+    script: 'echo $(ChromeWebdriver)' 
