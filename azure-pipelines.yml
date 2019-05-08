@@ -18,7 +18,5 @@ steps:
   displayName: 'Echo env variables'
   inputs: 
     targetType: inline
-    script: "Get-ChildItem $(driver)"
-- task: CmdLine@2
-  inputs:
-    script: 'echo $(ChromeWebdriver)' 
+    script: "Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))"
+
