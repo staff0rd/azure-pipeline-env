@@ -18,4 +18,4 @@ steps:
   displayName: 'Echo env variables'
   inputs: 
     targetType: inline
-    script: "Write-Host Path: $(ChromeWebDriver); Write-Host env: $(driver)"
+    script: "Get-ChildItem $(driver)"
